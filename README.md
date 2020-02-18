@@ -1,13 +1,15 @@
 # ucpass-spring-boot-starter
 
 ## 介绍
-**ucpass能力封装，包括短信、语音**，[云之讯](https://office.ucpaas.com/about/index.html)
+[云之讯](https://office.ucpaas.com/about/index.html)，**ucpass能力封装，包括短信、语音**
 ## 环境
+
 
 ### sms-spring-boot-starter
 #### JDK:1.8
 #### Spring-Boot:2.2.4
 #### Fastjson:1.2.61
+
 
 ## 使用方法
 
@@ -49,8 +51,8 @@ public class TestController {
         //创建传输类设置参数
         SendSMSDTO sendSMSDTO  = new SendSMSDTO();
         sendSMSDTO.setMobile("18888888888");     //手机号
-        sendSMSDTO.setTemplateid("531705"); //模板
-        sendSMSDTO.setParam("9623");      //参数
+        sendSMSDTO.setTemplateid("55555"); //模板
+        sendSMSDTO.setParam("9999");      //参数
         return smsService.sendSMS(sendSMSDTO);
     }
 
