@@ -71,3 +71,7 @@ public class TestController {
  */
 @ComponentScan({"com.test","sms.test"})
 ~~~
+
+# License
+Released under the [MIT](LICENSE) License.
+
