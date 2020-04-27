@@ -65,7 +65,8 @@ public class TestController {
 ~~~
 
 ## Tips
-在引入自己封装的Starter的时候,有的人会报错xxxx类的bean没有找到问题,是因为@SpringBootApplication扫描包的范围是启动类所在同级包和子包,但是不包括第三方的jar包.如果需要扫描maven依赖添加的Jar,我们就要单独使用@ComponentScan注解扫描包.
+在引入第三方封装的Starter的时候,有的人会报错xxxx类的bean没有找到问题,是因为@SpringBootApplication扫描包的范围是启动类所在同级包和子包,但是不包括第三方的jar包.如果需要扫描maven依赖添加的Jar,我们就要单独使用@ComponentScan注解扫描包.
+
 针对这种情况解决方式有两种:
 
 第一种:是你封装的Starter项目下父级包名称和测试项目的父级包名一样,例如这两个项目包名都叫com.eelve,这样可以不使用@ComponentScan注解,很显然这样做有局限性,不推荐.
@@ -76,7 +77,16 @@ public class TestController {
 /**
  * @ComponentScan注解扫描多个包下示例
  */
+@SpringBootApplication
 @ComponentScan({"com.test","sms.test"})
+public class UcpaasSmsApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(UcpaasSmsApplication.class, args);
+    }
+
+}
+
 ~~~
 
 # License
